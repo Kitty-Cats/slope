@@ -2,7 +2,8 @@
 
 int size=7;
 char* letter="X";
-int main(){
+int main(int argv, char** argc){
+    letter=argc[1];
     int row;
     int width;
     for(row=0;row<size;row++){
