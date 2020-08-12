@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <libc.h>
-#include "triangle.h"
+#include "slope.h"
 
 int size=5;
-char* letter="X";
+char* unit="X";
 int main(int numargs, char** args){
     //printf("%d",numargs);
     //check if there is two or more arguments
     if(numargs>1){
-        letter=args[1];
-        if(strcmp(letter,"help")==0){
-            help(args[0],letter);
+        unit=args[1];
+        if(strcmp(unit,"help")==0){
+            help(args[0],unit);
         }
     }
     //check if there is three or more arguments
@@ -22,13 +22,13 @@ int main(int numargs, char** args){
     int width;
     for(row=0;row<size;row++){
         for(width=-1;width<row;width++){        
-            printf("%s",letter);
+            printf("%s",unit);
         }
         printf("\n");
     }
 }
 
 void help(char* program,char* arg){
-    printf("Usage: %s (letter used in triangle) (size of the triangle)\n",program);
+    printf("Usage: %s (unit used in slope) (size of the slope)\n",program);
     exit(0);
 }
