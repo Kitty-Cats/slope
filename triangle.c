@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <libc.h>
-
-void help(char* program,char* arg);
+#include "triangle.h"
 
 int size=5;
 char* letter="X";
