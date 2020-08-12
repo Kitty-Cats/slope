@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include <libc.h>
 
+void help(char* program,char* arg);
+
 int size=5;
 char* letter="X";
 int main(int numargs, char** args){
     //printf("%d",numargs);
     //check if there is two or more arguments
     if(numargs>1){
-      letter=args[1];  
+        letter=args[1];
+        if(strcmp(letter,"help")==0){
+            help(args[0],letter);
+        }
     }
     //check if there is three or more arguments
     if(numargs>2){
@@ -22,4 +27,9 @@ int main(int numargs, char** args){
         }
         printf("\n");
     }
+}
+
+void help(char* program,char* arg){
+    printf("Usage: %s (letter used in triangle) (size of the triangle)\n",program);
+    exit(0);
 }
