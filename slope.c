@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <libc.h>
+#include <string.h>
+#include <stdlib.h>
 #include "slope.h"
 
 int size=5;
